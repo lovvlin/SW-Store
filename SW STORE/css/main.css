@@ -1,0 +1,154 @@
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+}
+
+html { overflow-x: hidden; }
+
+body {
+	
+	background-color: rgb(10, 10, 10);
+	line-height: 1.55;
+	font-family: 'Mina';
+	color: #FFFFFF;
+}
+
+.navbar {
+	position: fixed;
+	z-index: 11;
+	width: 100%;
+	justify-content: center;
+}
+
+header .row {
+	position: fixed;
+	font-family: 'Rubik';
+	z-index: 10;
+	width: 100vw;
+	background-color: rgb(10, 10, 10);
+	font-size: calc(var(--index) * 1.);
+}
+
+.nav-link {
+	margin-right:  10px;
+}
+
+.layers {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.layer {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+	z-index: 2;
+
+}
+
+.layers__base {
+	transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
+	z-index: 0;
+}
+
+.main-img {
+	width: calc(var(--index) * 40);
+	margin-top: calc(var(--index) * 5);
+	transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+}
+
+.layers__middle {
+	transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+
+.layers__pre__middle {
+	transform: translate3d(0, calc(var(--scrollTop) / 5), 0);	
+}
+
+.layers__front {
+	transform: translate3d(0, calc(var(--scrollTop) / 30), 0);
+}
+
+.layer__header {
+	z-index: 1;
+	transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+	transition: var(--transition);
+	will-change: transform;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: var(--text);
+	text-shadow: 0 0 15px #9d822b;
+}
+
+.layersh1 {
+	transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-family: 'Monoton', cursive;
+	font-weight: 500;
+	font-size: calc(var(--index) * 10.8);
+	text-transform: uppercase;
+	color: rgba(233, 251, 255, 0.25);;
+}
+
+.layers__title {
+	transform: translate3d(0, calc(var(--scrollTop) / 2.3), 0);
+	font-size: calc(var(--index) * 0.8);
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin-top: calc(var(--index) * 6.5);
+	font-family: 'Mina';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 32px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.container-disassembled {
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	text-align: center;
+	z-index: 4;
+}
+
+.PC66-disassembled {
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+	width: 50vw;
+}
+hr {
+	width: 200px;
+	height: 5px;
+}
+
+.disassembled {
+	margin-left: 60px;
+}
+
+
+
+
+
